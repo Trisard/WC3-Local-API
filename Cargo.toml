@@ -7,6 +7,7 @@ license = "MIT"
 keywords = ["warcraft", "wc3", "websocket", "gaming", "blizzard"]
 categories = ["games", "api-bindings"]
 readme = "README.md"
+repository = "https://github.com/Trisard/WC3-Local-API"
 
 [[bin]]
 name = "wc3-spy"
