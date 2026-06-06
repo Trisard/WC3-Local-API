@@ -1,0 +1,28 @@
+[package]
+name = "wc3_local_api"
+version = "0.1.0"
+edition = "2021"
+description = "Read Warcraft III process state and connect to its local WebSocket API"
+license = "MIT"
+keywords = ["warcraft", "wc3", "websocket", "gaming", "blizzard"]
+categories = ["games", "api-bindings"]
+readme = "README.md"
+
+[[bin]]
+name = "wc3-spy"
+path = "src/bin/wc3_spy.rs"
+
+[dependencies]
+sysinfo     = "0.38.4"
+netstat2    = "0.11.2"
+tungstenite = "0.29"
+thiserror   = "2"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61.2", features = [
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_Memory",
+    "Win32_System_Threading",
+    "Win32_Foundation",
+    "Win32_Security",
+] }
